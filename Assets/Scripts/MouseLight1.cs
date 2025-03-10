@@ -10,22 +10,13 @@ public class MouseLight : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        Light.SetActive(false);
+        //Light.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            Light.SetActive(true);
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            Light.SetActive(false);
-        }
-
+       
         Vector2 mousePos = Input.mousePosition;
         Vector2 worldPos = cam.ScreenToWorldPoint(mousePos);
         transform.position = worldPos;
