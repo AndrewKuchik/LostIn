@@ -43,7 +43,7 @@ public class MouseLight : MonoBehaviour
         //    >  - (more then)
         //    
 
-        Debug.Log(collision.transform.name);
+        //Debug.Log(collision.transform.name);
         //collision.transform.position = new Vector2(10,15);
 
         EnemyHP enemy = collision.transform.GetComponent<EnemyHP>();

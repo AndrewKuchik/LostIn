@@ -19,13 +19,13 @@ public class EnemyHP : MonoBehaviour
         if (health <= 0)
             Destroy(gameObject);
 
-        Debug.Log("Hit");
+        //Debug.Log("Hit");
         health -= damage;
         health = Mathf.Clamp(health, 0, maxHealth);
 
         float healthPercent = (health / maxHealth) * 100;
-        Debug.Log(health);
-        Debug.Log($"{healthPercent}% - perc");
+        //Debug.Log(health);
+        //Debug.Log($"{healthPercent}% - perc");
 
         UpdateHealthBar();
     }
