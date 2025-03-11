@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1a7f7fad054566046bccda89128fe48a
+guid: a1af842ebb9c3fa45902e1c9e67d85cd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,111 +123,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0420\u0435\u0441\u0443\u0440\u0441 25_0"
+      name: "\u0420\u0435\u0441\u0443\u0440\u0441 30_0"
       rect:
         serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
-        width: 142
-        height: 183
+        width: 130
+        height: 419
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80ba941fe081e3b498c2381f56467cbf
-      internalID: -1053895778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0420\u0435\u0441\u0443\u0440\u0441 25_1"
-      rect:
-        serializedVersion: 2
-        x: 151
-        y: 0
-        width: 129
-        height: 225
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d5afd07ce8fdcd47b7322bf6261a813
-      internalID: -1375905089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0420\u0435\u0441\u0443\u0440\u0441 25_2"
-      rect:
-        serializedVersion: 2
-        x: 279
-        y: 0
-        width: 149
-        height: 137
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06c6ebf496cecb54ea7160bf50b63736
-      internalID: -839158374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0420\u0435\u0441\u0443\u0440\u0441 25_3"
-      rect:
-        serializedVersion: 2
-        x: 438
-        y: 0
-        width: 128
-        height: 195
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e58b4798d9f9c8545b45712caf05947a
-      internalID: 1655474776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u0420\u0435\u0441\u0443\u0440\u0441 25_4"
-      rect:
-        serializedVersion: 2
-        x: 573
-        y: 0
-        width: 143
-        height: 184
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e9b7849743e03e428fc8c424b25162c
-      internalID: -1738439940
+      spriteID: 6fdf86ada225c8a4eb583c0c3fd9c0d1
+      internalID: -527136959
       vertices: []
       indices: 
       edges: []
@@ -236,7 +148,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: eb0597388a73aa546ba2a1e65c614acf
+    spriteID: f6d57c366f5a50746989a8fa8e966d6b
     internalID: 0
     vertices: []
     indices: 
@@ -246,11 +158,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u0420\u0435\u0441\u0443\u0440\u0441 25_0": -1053895778
-      "\u0420\u0435\u0441\u0443\u0440\u0441 25_1": -1375905089
-      "\u0420\u0435\u0441\u0443\u0440\u0441 25_2": -839158374
-      "\u0420\u0435\u0441\u0443\u0440\u0441 25_3": 1655474776
-      "\u0420\u0435\u0441\u0443\u0440\u0441 25_4": -1738439940
+      "\u0420\u0435\u0441\u0443\u0440\u0441 30_0": -527136959
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
