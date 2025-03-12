@@ -6,17 +6,16 @@ public class MouseLight : MonoBehaviour
     Camera cam;
     public GameObject Light;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         cam = Camera.main;
-        //Light.SetActive(true);
+        Light.SetActive(true);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-       
         Vector2 mousePos = Input.mousePosition;
         Vector2 worldPos = cam.ScreenToWorldPoint(mousePos);
         transform.position = worldPos;
@@ -42,9 +41,6 @@ public class MouseLight : MonoBehaviour
         //    <  - (less then)
         //    >  - (more then)
         //    
-
-        //Debug.Log(collision.transform.name);
-        //collision.transform.position = new Vector2(10,15);
 
         EnemyHP enemy = collision.transform.GetComponent<EnemyHP>();
 

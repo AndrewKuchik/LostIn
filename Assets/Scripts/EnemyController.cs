@@ -21,12 +21,12 @@ public class EnemyController : MonoBehaviour
         if (collision.transform.tag == "Player")
         {
             PlayerHP playerHp = collision.transform.GetComponent<PlayerHP>();
-            playerHp.hp -= 40;
+            playerHp.hp -= 25;
 
-            if (playerHp.hp <= 0)
-            {
-                Destroy(collision.gameObject);
-            }
+            //if (playerHp.hp <= 0)
+            //{
+            //    Destroy(collision.gameObject);
+            //}
         }
     }
 }

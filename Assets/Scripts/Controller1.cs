@@ -16,12 +16,19 @@ public class Controller1 : MonoBehaviour
 
     private InputSystem_Actions controls;
     Rigidbody2D rb;
+    SpriteRenderer _renderer;
+
+    public float interractionRadius = 2f;
+    public LayerMask lampLayer;
+
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         controls = new InputSystem_Actions();
         availableJumpsCount = maxAvailableJumpsCount;
+        _renderer = GetComponent<SpriteRenderer>();
+
     }
 
     private void OnEnable()
@@ -40,6 +47,7 @@ public class Controller1 : MonoBehaviour
         Movement();
         Jump();
         CheckIfGrounded();
+        ToggleLamp();
     }
 
 
@@ -59,6 +67,15 @@ public class Controller1 : MonoBehaviour
     private void Movement()
     {
         Vector2 movDir = controls.Player.Move.ReadValue<Vector2>();
+        if (movDir.x < 0)
+        {
+            _renderer.flipX = true;
+        }
+        else if (movDir.x > 0)
+        {
+            _renderer.flipX = false;
+        }
+
         transform.Translate(movDir.x * Time.deltaTime * speed, 0, 0);
     }
 
@@ -71,6 +88,25 @@ public class Controller1 : MonoBehaviour
            
             availableJumpsCount = maxAvailableJumpsCount;
             isJumping = false;
+        }
+    }
+
+    private void ToggleLamp()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Collider2D lampCollider = Physics2D.OverlapCircle(transform.position, interractionRadius, lampLayer);
+
+            Debug.Log(lampCollider);
+            if (lampCollider != null)
+            {
+                LampController lamp = lampCollider.GetComponent<LampController>();
+                if (lamp != null)
+                {
+                    lamp.ToggleLamp();
+                    transform.GetComponent<PlayerHP>().healPlayer(100);
+                }
+            }
         }
     }
 }

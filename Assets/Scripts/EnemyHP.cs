@@ -16,11 +16,12 @@ public class EnemyHP : MonoBehaviour
 
     public void ReceiveDamage(float damage)
     {
+        health -= damage;
         if (health <= 0)
             Destroy(gameObject);
 
         //Debug.Log("Hit");
-        health -= damage;
+        
         health = Mathf.Clamp(health, 0, maxHealth);
 
         float healthPercent = (health / maxHealth) * 100;
