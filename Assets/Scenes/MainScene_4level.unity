@@ -2268,74 +2268,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 105849748}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &107216012
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -44.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 177.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.068817474
-      objectReference: {fileID: 0}
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.9976293
-      objectReference: {fileID: 0}
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -187.892
-      objectReference: {fileID: 0}
-    - target: {fileID: 9028443615219250604, guid: 29d23c71085cce14c93bcc9dde5f8589,
-        type: 3}
-      propertyPath: m_Name
-      value: lost-in-dreams_15
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 29d23c71085cce14c93bcc9dde5f8589, type: 3}
 --- !u!1 &111680574
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,7 +4857,7 @@ PrefabInstance:
     - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 156.33762
+      value: 163.42574
       objectReference: {fileID: 0}
     - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
         type: 3}
@@ -9155,7 +9087,7 @@ PrefabInstance:
     - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 184.84
+      value: 189.2
       objectReference: {fileID: 0}
     - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
         type: 3}
@@ -11065,7 +10997,7 @@ PrefabInstance:
     - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 153.31187
+      value: 160.4
       objectReference: {fileID: 0}
     - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
         type: 3}
@@ -17013,7 +16945,7 @@ PrefabInstance:
     - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 167.37
+      value: 180.9
       objectReference: {fileID: 0}
     - target: {fileID: 5750773204502389113, guid: 29d23c71085cce14c93bcc9dde5f8589,
         type: 3}
@@ -36754,7 +36686,6 @@ SceneRoots:
   - {fileID: 650788730}
   - {fileID: 312559423}
   - {fileID: 1051665145}
-  - {fileID: 107216012}
   - {fileID: 544380324}
   - {fileID: 241457363}
   - {fileID: 493134339}
