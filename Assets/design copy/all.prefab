@@ -471,7 +471,8 @@ PrefabInstance:
       propertyPath: LightText
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1883686552480700972, guid: 615adc42dcf9a014390a51443c1268c8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

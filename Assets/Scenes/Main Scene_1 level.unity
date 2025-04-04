@@ -2285,8 +2285,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 7841414726919033701}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!4 &352578501 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3988822113648478545, guid: 9c94be37546604f48bd21f7322219269,
@@ -2412,8 +2414,10 @@ GameObject:
   m_Component:
   - component: {fileID: 384670388}
   - component: {fileID: 384670389}
+  - component: {fileID: 384670391}
+  - component: {fileID: 384670390}
   m_Layer: 0
-  m_Name: Square
+  m_Name: PORTAL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2428,7 +2432,7 @@ Transform:
   m_GameObject: {fileID: 384670387}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 121.11, y: -11.77, z: 1.064692}
+  m_LocalPosition: {x: 122.1, y: -4.49, z: 1.064692}
   m_LocalScale: {x: 4.007, y: 10.152501, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2490,6 +2494,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &384670390
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384670387}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &384670391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384670387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841227e887ae95f40afee04975bc7871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneIndex: 1
 --- !u!4 &423975241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9199475117714128, guid: c28b79efeabd6044e880e18335caf730,
@@ -3621,8 +3684,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 7841414726919033701}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1 &584375915
 GameObject:
   m_ObjectHideFlags: 0
@@ -9585,8 +9650,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 7841414726919033701}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1 &1147136022
 GameObject:
   m_ObjectHideFlags: 0
@@ -23135,7 +23202,7 @@ Transform:
   m_GameObject: {fileID: 1868492503695777367}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -55.93, y: -6.74, z: -5}
+  m_LocalPosition: {x: 113.8, y: -6.2, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24934,7 +25001,7 @@ Transform:
   m_GameObject: {fileID: 2446859222247773738}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.93, y: -6.74, z: 0}
+  m_LocalPosition: {x: 113.8, y: -6.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26936,7 +27003,7 @@ Transform:
   m_GameObject: {fileID: 7172414196622870226}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -55.93, y: -6.74, z: -5}
+  m_LocalPosition: {x: 113.8, y: -6.2, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28925,6 +28992,7 @@ MonoBehaviour:
   lampLayer:
     serializedVersion: 2
     m_Bits: 65536
+  canJump: 1
 --- !u!1001 &8161278699902660849
 PrefabInstance:
   m_ObjectHideFlags: 0

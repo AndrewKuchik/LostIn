@@ -8,10 +8,10 @@ using UnityEngine.SceneManagement;
 public class LightFader : MonoBehaviour
 {
     public Light2D targetLight;
-    float fadeDuration = 5f;
+    public float fadeDuration = 5f;
     public float rotationSpeed = 180f;
     public float rotationDuration = 4f;
-
+    public bool hasToRotate = false;
     void Start()
     {
         targetLight.intensity = 0;
@@ -38,9 +38,12 @@ public class LightFader : MonoBehaviour
 
         while (elapsedTime < fadeDuration)
         {
+            if (hasToRotate)
+            {
+                float rotationStep = rotationSpeed * Time.deltaTime;
+                player.Rotate(Vector3.forward, rotationStep);
+            }
             targetLight.intensity = Mathf.Lerp(startIntensity, targetIntensity, elapsedTime / fadeDuration);
-            float rotationStep = rotationSpeed * Time.deltaTime;
-            player.Rotate(Vector3.forward, rotationStep);
             elapsedTime += Time.deltaTime;
             yield return null;
         }

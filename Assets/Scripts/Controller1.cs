@@ -21,7 +21,8 @@ public class Controller1 : MonoBehaviour
     public float interractionRadius = 2f;
     public LayerMask lampLayer;
 
-
+    public bool canJump = true;
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -53,13 +54,16 @@ public class Controller1 : MonoBehaviour
 
     private void Jump()
     {
-        if (controls.Player.Jump.WasPressedThisFrame() || Keyboard.current.wKey.wasPressedThisFrame)
+        if (canJump)
         {
-            if (availableJumpsCount > 0) 
+            if (controls.Player.Jump.WasPressedThisFrame() || Keyboard.current.wKey.wasPressedThisFrame)
             {
-                GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, jumpHeight);
-                availableJumpsCount--;
-                isJumping = true;
+                if (availableJumpsCount > 0) 
+                {
+                    GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, jumpHeight);
+                    availableJumpsCount--;
+                    isJumping = true;
+                }
             }
         }
     }

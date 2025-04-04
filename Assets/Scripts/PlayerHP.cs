@@ -27,6 +27,9 @@ public class PlayerHP : MonoBehaviour
             if (fader != null)
             {
                 StartCoroutine(fader.FadeLight(1, 0, transform));
+                Rigidbody2D rb = GetComponent<Rigidbody2D>();
+                rb.gravityScale = 0;
+                rb.linearVelocityY = 0;
             }
         }
     }
