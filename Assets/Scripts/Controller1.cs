@@ -23,6 +23,8 @@ public class Controller1 : MonoBehaviour
 
     public bool canJump = true;
     
+    public Animator animator;
+    public float horizontalMove;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -58,6 +60,8 @@ public class Controller1 : MonoBehaviour
         {
             if (controls.Player.Jump.WasPressedThisFrame() || Keyboard.current.wKey.wasPressedThisFrame)
             {
+                animator.SetBool("is_jumping", true);
+                
                 if (availableJumpsCount > 0) 
                 {
                     GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, jumpHeight);
@@ -67,7 +71,10 @@ public class Controller1 : MonoBehaviour
             }
         }
     }
-
+    public void KomandaKuruIzsauktKadEsamPiezem()
+    {
+        animator.SetBool("is_jumping", false);
+    }
     private void Movement()
     {
         Vector2 movDir = controls.Player.Move.ReadValue<Vector2>();
@@ -79,8 +86,9 @@ public class Controller1 : MonoBehaviour
         {
             _renderer.flipX = false;
         }
-
+        
         transform.Translate(movDir.x * Time.deltaTime * speed, 0, 0);
+        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
     }
 
     private void CheckIfGrounded()

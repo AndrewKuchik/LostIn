@@ -628,8 +628,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 1114019414}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1001 &23112759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2044,8 +2046,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 1114019414}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1001 &98273655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4421,8 +4425,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 1114019414}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1 &272824354
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,8 +5621,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 1114019414}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1 &364824990
 GameObject:
   m_ObjectHideFlags: 0
@@ -17432,8 +17440,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 1114019414}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1 &1079356285
 GameObject:
   m_ObjectHideFlags: 0
@@ -22906,8 +22916,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 1114019414}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1 &1390708629
 GameObject:
   m_ObjectHideFlags: 0
@@ -27435,6 +27447,7 @@ MonoBehaviour:
   lampLayer:
     serializedVersion: 2
     m_Bits: 65536
+  canJump: 1
 --- !u!114 &1653726787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27486,7 +27499,7 @@ Animator:
   m_GameObject: {fileID: 1653726783}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f4afb725d4f39e841a2b56d3adff27c2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8d288428759dfe045943d75480241fb2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -35791,8 +35804,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 1114019414}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1001 &2123250028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36458,8 +36473,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 1114019414}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1001 &7125802905637467407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36661,8 +36678,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLight: {fileID: 1114019414}
+  fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
+  hasToRotate: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
