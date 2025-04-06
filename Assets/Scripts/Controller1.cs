@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class Controller1 : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class Controller1 : MonoBehaviour
     
     public Animator animator;
     public float horizontalMove;
+    bool jump = false;
+    
+    public UnityEvent OnLandEvent;
+
+  
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,6 +57,8 @@ public class Controller1 : MonoBehaviour
         Jump();
         CheckIfGrounded();
         ToggleLamp();
+        
+        
     }
 
 
@@ -70,6 +78,7 @@ public class Controller1 : MonoBehaviour
                 }
             }
         }
+        
     }
     public void KomandaKuruIzsauktKadEsamPiezem()
     {
@@ -77,6 +86,8 @@ public class Controller1 : MonoBehaviour
     }
     private void Movement()
     {
+        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+        
         Vector2 movDir = controls.Player.Move.ReadValue<Vector2>();
         if (movDir.x < 0)
         {
@@ -88,9 +99,10 @@ public class Controller1 : MonoBehaviour
         }
         
         transform.Translate(movDir.x * Time.deltaTime * speed, 0, 0);
-        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+       ;
     }
-
+    
+    
     private void CheckIfGrounded()
     {
         bool isGrounded = Physics2D.OverlapCircle(groundChecker.position, groundRadius, groundLayer);
