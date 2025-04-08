@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2696623141297542041}
   - component: {fileID: 4858965804502344108}
   m_Layer: 0
-  m_Name: "\u0420\u0435\u0441\u0443\u0440\u0441 66_0"
+  m_Name: death hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
