@@ -99,7 +99,7 @@ public class Controller1 : MonoBehaviour
         }
         
         transform.Translate(movDir.x * Time.deltaTime * speed, 0, 0);
-        animator.SetFloat("speed", Mathf.Abs(Movement));
+        animator.SetFloat("speed", Mathf.Abs(movDir.x));
     }
     
     
@@ -112,6 +112,8 @@ public class Controller1 : MonoBehaviour
            
             availableJumpsCount = maxAvailableJumpsCount;
             isJumping = false;
+            
+            KomandaKuruIzsauktKadEsamPiezem();
         }
     }
 
