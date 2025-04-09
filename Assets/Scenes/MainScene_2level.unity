@@ -35911,7 +35911,6 @@ MonoBehaviour:
     m_Bits: 0
   canJump: 0
   animator: {fileID: 2021185611161910911}
-  horizontalMove: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
