@@ -35910,8 +35910,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   canJump: 0
-  animator: {fileID: 0}
-  horizontalMove: 0
+  animator: {fileID: 2021185611161910911}
+  horizontalMove: 1
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &7494127340416957159
 SpriteRenderer:
   m_ObjectHideFlags: 0
