@@ -25,7 +25,6 @@ public class Controller1 : MonoBehaviour
     public bool canJump = true;
     
     public Animator animator;
-    public float horizontalMove;
     bool jump = false;
     
     public UnityEvent OnLandEvent;
@@ -86,12 +85,13 @@ public class Controller1 : MonoBehaviour
     }
     private void Movement()
     {
-        animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+        
         
         Vector2 movDir = controls.Player.Move.ReadValue<Vector2>();
         if (movDir.x < 0)
         {
             _renderer.flipX = true;
+            
         }
         else if (movDir.x > 0)
         {
@@ -99,7 +99,7 @@ public class Controller1 : MonoBehaviour
         }
         
         transform.Translate(movDir.x * Time.deltaTime * speed, 0, 0);
-       ;
+        animator.SetFloat("speed", Mathf.Abs(Movement));
     }
     
     
