@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: db31e6a16e6f88b4db716382a1bf113b
+guid: 9c74284401ee4a64da33fc204f8f051a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lost-in-dreams8_0
+      name: lost-in-dreams 1_0
       rect:
         serializedVersion: 2
-        x: 964
-        y: 750
-        width: 278
-        height: 297
+        x: 68
+        y: 683
+        width: 363
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,19 +138,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acb817f6f214a4043aecb55831cd9317
-      internalID: 413354929
+      spriteID: 21b556aca9f34914e9c6cfa00a38a63a
+      internalID: -1464081674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lost-in-dreams8_1
+      name: lost-in-dreams 1_1
       rect:
         serializedVersion: 2
-        x: 1294
-        y: 857
-        width: 336
+        x: 572
+        y: 627
+        width: 332
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96132465b75616149b7675aa6f99cf01
+      internalID: 957038037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lost-in-dreams 1_2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 337
+        width: 443
         height: 183
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -160,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a90197611a0572439eb80fda62a7100
-      internalID: 118389137
+      spriteID: 483c53a0bc0a8b546bf45a8af13962bd
+      internalID: -751215586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lost-in-dreams8_2
+      name: lost-in-dreams 1_3
       rect:
         serializedVersion: 2
-        x: 1637
-        y: 734
-        width: 251
-        height: 189
+        x: 609
+        y: 341
+        width: 413
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a66175a5ba9ea44fb1938045ee47817
-      internalID: -1475642690
+      spriteID: 2636e0df25b856c4689299910da18820
+      internalID: -279626906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lost-in-dreams8_3
+      name: lost-in-dreams 1_4
       rect:
         serializedVersion: 2
-        x: 29
-        y: 450
-        width: 771
-        height: 373
+        x: 1129
+        y: 332
+        width: 82
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae0011fc050b4d548a4cb5dbb2db93c8
-      internalID: -315832303
+      spriteID: f280a227f42613b4b9655e6dc4a862f8
+      internalID: -1865663433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lost-in-dreams8_4
+      name: lost-in-dreams 1_5
       rect:
         serializedVersion: 2
-        x: 977
-        y: 134
-        width: 234
-        height: 530
+        x: 160
+        y: 77
+        width: 376
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +248,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6d91f01b31cac943900127ebb2a106b
-      internalID: 1118423166
+      spriteID: 48aa8e1e3d5c60044a9d2c6da0d2a02e
+      internalID: -1433471463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lost-in-dreams8_5
+      name: lost-in-dreams 1_6
       rect:
         serializedVersion: 2
-        x: 1259
-        y: 558
-        width: 227
-        height: 191
+        x: 569
+        y: 80
+        width: 350
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,20 +270,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05dff889223db85439051421988426d7
-      internalID: 1547746636
+      spriteID: 0f5d7015bfdc1dc44aacc6d20c0dfbbb
+      internalID: -432390865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lost-in-dreams8_6
+      name: lost-in-dreams 1_7
       rect:
         serializedVersion: 2
-        x: 1624
-        y: 581
-        width: 140
-        height: 99
+        x: 1009
+        y: 72
+        width: 70
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,96 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24527934c6d3bd843aa3012c37a76c1c
-      internalID: 2124064138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lost-in-dreams8_7
-      rect:
-        serializedVersion: 2
-        x: 1765
-        y: 498
-        width: 105
-        height: 101
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d1571976d1b0c64a824de035a1474ae
-      internalID: 1804038226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lost-in-dreams8_8
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 23
-        width: 944
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1708d9f6c9345a438961474478c550e
-      internalID: 312911876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lost-in-dreams8_9
-      rect:
-        serializedVersion: 2
-        x: 1630
-        y: 378
-        width: 128
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ea23e2849b4b7146aec5b4e362be539
-      internalID: -1975136287
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lost-in-dreams8_10
-      rect:
-        serializedVersion: 2
-        x: 1740
-        y: 192
-        width: 121
-        height: 119
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3dc255ce996a0ba4482ca029999696f8
-      internalID: -1775480141
+      spriteID: 42727be87ef25c54d8a9a4497e364e0b
+      internalID: 490699573
       vertices: []
       indices: 
       edges: []
@@ -368,7 +302,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 388543715a48dba4b91794926069b4bd
+    spriteID: 488fd400e65eda04b99aa1441661c965
     internalID: 0
     vertices: []
     indices: 
@@ -378,17 +312,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lost-in-dreams8_0: 413354929
-      lost-in-dreams8_1: 118389137
-      lost-in-dreams8_10: -1775480141
-      lost-in-dreams8_2: -1475642690
-      lost-in-dreams8_3: -315832303
-      lost-in-dreams8_4: 1118423166
-      lost-in-dreams8_5: 1547746636
-      lost-in-dreams8_6: 2124064138
-      lost-in-dreams8_7: 1804038226
-      lost-in-dreams8_8: 312911876
-      lost-in-dreams8_9: -1975136287
+      lost-in-dreams 1_0: -1464081674
+      lost-in-dreams 1_1: 957038037
+      lost-in-dreams 1_2: -751215586
+      lost-in-dreams 1_3: -279626906
+      lost-in-dreams 1_4: -1865663433
+      lost-in-dreams 1_5: -1433471463
+      lost-in-dreams 1_6: -432390865
+      lost-in-dreams 1_7: 490699573
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
