@@ -6,11 +6,12 @@ public class EnemyHP : MonoBehaviour
 {
     private float health;
     public int maxHealth = 100;
-    public TMP_Text hpBar;
+    private SpriteRenderer sr;
 
 
     private void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         health = maxHealth;
     }
 
@@ -24,20 +25,27 @@ public class EnemyHP : MonoBehaviour
         
         health = Mathf.Clamp(health, 0, maxHealth);
 
-        float healthPercent = (health / maxHealth) * 100;
+        float healthPercent = (health / maxHealth);
         //Debug.Log(health);
-        //Debug.Log($"{healthPercent}% - perc");
+        Debug.Log($"{healthPercent}% - perc");
 
-        UpdateHealthBar();
+        UpdateEnemyColor(healthPercent);
+    }
+
+    private void UpdateEnemyColor(float currentHp)
+    {
+        // sr.color = Color.Lerp(sr.color, Color.red, currentHp);
+        // sr.color = Color.Lerp(Color.white, Color.red, currentHp);
+        sr.color = Color.Lerp(Color.red, Color.white, currentHp);
     }
 
     private void UpdateHealthBar()
     {
-        if (hpBar != null)
-        {
-            int roundedHealth = Mathf.RoundToInt((health / maxHealth) * 100);
-            hpBar.text = $"HP: {roundedHealth}%";
-        }
+        // if (hpBar != null)
+        // {
+        //     int roundedHealth = Mathf.RoundToInt((health / maxHealth) * 100);
+        //     hpBar.text = $"HP: {roundedHealth}%";
+        // }
     }
 
 
