@@ -9,14 +9,29 @@ EditorBuildSettings:
     path: Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Scenes/S_Content_Overview.unity
     guid: 63fdc04a097eb0b4ba4af78a98dac40d
   - enabled: 1
+    path: Assets/Scenes/cut_scene_1level.unity
+    guid: 21fba439885b0a74690262d6c094a58c
+  - enabled: 1
     path: Assets/Scenes/Main Scene_1 level.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/cut_ scene_for all.unity
+    guid: 39136c1f16f942543ad3437f0c25dcac
   - enabled: 1
     path: Assets/Scenes/MainScene_2level.unity
     guid: 2b7c6e42ba1ca874db9199ba5be73fbd
   - enabled: 1
+    path: Assets/Scenes/cut_ scene_for all 1.unity
+    guid: 7734f787c982eb5408dd751036f9b4fc
+  - enabled: 1
     path: Assets/Scenes/MainScene_3level.unity
     guid: 3815318f06e8e0c4cab0691fc05af615
+  - enabled: 1
+    path: Assets/Scenes/cut_ scene_for all 2.unity
+    guid: 275124f1e9bcac04785d6ac10698be02
+  - enabled: 1
+    path: Assets/Scenes/MainScene_4level.unity
+    guid: e34f8e3d52d3d68449968ea456852eb8
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9eb07e2d669e9c94e9d7d3c782a916f7,
       type: 2}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class text_cutscene : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class text_cutscene : MonoBehaviour
             {
                 textObjects[currentIndex].SetActive(true);
                 currentIndex++;
+            }
+            else
+            {
+                SceneManager.LoadScene(1);
             }
         }
     }

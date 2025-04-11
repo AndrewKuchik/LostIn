@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5392548608618533577}
   - component: {fileID: 7625092651919475229}
   m_Layer: 0
-  m_Name: Enemy1
+  m_Name: enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  hpBar: {fileID: 0}
 --- !u!95 &6577813907908290960
 Animator:
   serializedVersion: 7
@@ -175,7 +174,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.056158066, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -185,7 +184,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.42, y: 1.83}
+  m_Size: {x: 1.0942802, y: 1.83}
   m_EdgeRadius: 0
 --- !u!50 &7625092651919475229
 Rigidbody2D:
