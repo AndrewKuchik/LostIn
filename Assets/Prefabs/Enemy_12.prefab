@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8763701545310461644
+--- !u!1001 &3990391267046468367
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,12 +11,12 @@ PrefabInstance:
     - target: {fileID: 2786527329332277033, guid: ecbf04dec4afd834285c5033434fdeef,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.436792
+      value: -13.299634
       objectReference: {fileID: 0}
     - target: {fileID: 2786527329332277033, guid: ecbf04dec4afd834285c5033434fdeef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.322973
+      value: 4.029694
       objectReference: {fileID: 0}
     - target: {fileID: 2786527329332277033, guid: ecbf04dec4afd834285c5033434fdeef,
         type: 3}
@@ -68,17 +68,42 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.46
       objectReference: {fileID: 0}
+    - target: {fileID: 5494142980064358375, guid: ecbf04dec4afd834285c5033434fdeef,
+        type: 3}
+      propertyPath: maxHealth
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5991205763273916942, guid: ecbf04dec4afd834285c5033434fdeef,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_12 Variant
+      value: Enemy_12
       objectReference: {fileID: 0}
+    - target: {fileID: 6416481651897392192, guid: ecbf04dec4afd834285c5033434fdeef,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 87e2731d49123e0478ee542575c75c0a, type: 2}
     - target: {fileID: 6797594637627995896, guid: ecbf04dec4afd834285c5033434fdeef,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1494747558, guid: 7b30920f8b22e6446beb0c98671511ae,
         type: 3}
+    - target: {fileID: 6797594637627995896, guid: ecbf04dec4afd834285c5033434fdeef,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797594637627995896, guid: ecbf04dec4afd834285c5033434fdeef,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797594637627995896, guid: ecbf04dec4afd834285c5033434fdeef,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

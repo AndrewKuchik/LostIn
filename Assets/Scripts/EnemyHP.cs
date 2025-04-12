@@ -7,6 +7,7 @@ public class EnemyHP : MonoBehaviour
     private float health;
     public int maxHealth = 100;
     private SpriteRenderer sr;
+    public Animator animator;
 
 
     private void Start()
@@ -19,7 +20,14 @@ public class EnemyHP : MonoBehaviour
     {
         health -= damage;
         if (health <= 0)
+        
             Destroy(gameObject);
+            
+        
+            
+            
+        
+        
 
         //Debug.Log("Hit");
         
@@ -30,6 +38,8 @@ public class EnemyHP : MonoBehaviour
         Debug.Log($"{healthPercent}% - perc");
 
         UpdateEnemyColor(healthPercent);
+        animator.SetBool("dead", true);
+        
     }
 
     private void UpdateEnemyColor(float currentHp)
@@ -37,6 +47,7 @@ public class EnemyHP : MonoBehaviour
         // sr.color = Color.Lerp(sr.color, Color.red, currentHp);
         // sr.color = Color.Lerp(Color.white, Color.red, currentHp);
         sr.color = Color.Lerp(Color.red, Color.white, currentHp);
+       
     }
 
     private void UpdateHealthBar()
