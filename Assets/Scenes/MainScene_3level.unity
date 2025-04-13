@@ -10762,7 +10762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
@@ -16634,7 +16634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
@@ -16874,7 +16874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
@@ -17944,7 +17944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
@@ -18085,7 +18085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
@@ -18779,7 +18779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
@@ -19705,7 +19705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
@@ -20133,7 +20133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
@@ -21947,7 +21947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
@@ -22053,7 +22053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c739211eb6385334490b2e017fba3a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetLight: {fileID: 0}
+  targetLight: {fileID: 7986183834773800580}
   fadeDuration: 5
   rotationSpeed: 180
   rotationDuration: 4
