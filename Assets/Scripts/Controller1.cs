@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using TMPro;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 
@@ -29,6 +31,10 @@ public class Controller1 : MonoBehaviour
     
     public UnityEvent OnLandEvent;
 
+    public int currentGold = 0;
+    public TextMeshProUGUI GoldText;
+
+    private PlayerHP playerHP;
   
     private void Awake()
     {
@@ -36,7 +42,12 @@ public class Controller1 : MonoBehaviour
         controls = new InputSystem_Actions();
         availableJumpsCount = maxAvailableJumpsCount;
         _renderer = GetComponent<SpriteRenderer>();
+        playerHP = GetComponent<PlayerHP>();
+    }
 
+    private void Start()
+    {
+        GoldText.text = currentGold.ToString();
     }
 
     private void OnEnable()
@@ -56,8 +67,6 @@ public class Controller1 : MonoBehaviour
         Jump();
         CheckIfGrounded();
         ToggleLamp();
-        
-        
     }
 
 
@@ -71,7 +80,7 @@ public class Controller1 : MonoBehaviour
                 
                 if (availableJumpsCount > 0) 
                 {
-                    GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, jumpHeight);
+                    rb.linearVelocity = new Vector2(0, jumpHeight);
                     availableJumpsCount--;
                     isJumping = true;
                 }
@@ -85,8 +94,6 @@ public class Controller1 : MonoBehaviour
     }
     private void Movement()
     {
-        
-        
         Vector2 movDir = controls.Player.Move.ReadValue<Vector2>();
         if (movDir.x < 0)
         {
@@ -123,16 +130,30 @@ public class Controller1 : MonoBehaviour
         {
             Collider2D lampCollider = Physics2D.OverlapCircle(transform.position, interractionRadius, lampLayer);
 
-            Debug.Log(lampCollider);
-            if (lampCollider != null)
+            // Debug.Log(lampCollider);
+            if (lampCollider == null) return;
+            
+            LampController lamp = lampCollider.GetComponent<LampController>();
+            if (lamp == null) return;
+            
+            if (!lamp.isActiveNow)
             {
-                LampController lamp = lampCollider.GetComponent<LampController>();
-                if (lamp != null)
+                if (currentGold >= lamp.ActivatePrice)
                 {
+                    UpdateGold(-lamp.ActivatePrice);
                     lamp.ToggleLamp();
-                    transform.GetComponent<PlayerHP>().healPlayer(100);
                 }
             }
+            else
+            {
+                playerHP.healPlayer(100);
+            }
         }
+    }
+
+    public void UpdateGold(int amount)
+    {
+        currentGold += amount;
+        GoldText.text = currentGold.ToString();
     }
 }

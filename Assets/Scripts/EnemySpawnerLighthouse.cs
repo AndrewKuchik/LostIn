@@ -12,16 +12,21 @@ public class EnemySpawnerLighthouse : MonoBehaviour
     void Start()
     {
         lamp = GetComponent<LampController>();
-        Enemies.ForEach(x => x.SetActive(false));
+        if (Enemies.Count > 0)
+        {
+            Enemies.ForEach(x => x.SetActive(false));
+        }
     }
 
-    void Update()
+    public void EnableEnemies()
     {
-
-        if (lamp.Light.activeSelf && !triggered)
+        if (!triggered)
         {
             triggered = true;
-            Enemies.ForEach(x => x.SetActive(true));
+            if (Enemies.Count > 0)
+            {
+                Enemies.ForEach(x => x.SetActive(true));
+            }
         }
     }
 }

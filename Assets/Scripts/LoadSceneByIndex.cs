@@ -3,15 +3,23 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneByIndex : MonoBehaviour
 {
-    // General method to load scenes based on build index
+    public GameObject MainMenuTab;
+    public GameObject SelectLevelTab;
+    
     public void LoadScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
-        
     }
-    public void Log()
+    public void SelectLevel()
     {
-        Debug.Log("Poga nospiesta");
+        MainMenuTab.SetActive(false);
+        SelectLevelTab.SetActive(true);
+    }
+
+    public void BackToMainMenu()
+    {
+        SelectLevelTab.SetActive(false);
+        MainMenuTab.SetActive(true);
     }
 
 

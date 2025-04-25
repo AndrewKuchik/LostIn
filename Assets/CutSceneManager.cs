@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CutSceneManager : MonoBehaviour
 {
-    public int nextScene;
+    // public int nextScene;
     public float nextSceneTime; 
     void Start()
     {
@@ -15,6 +15,6 @@ public class CutSceneManager : MonoBehaviour
     IEnumerator NextSceneSwitch()
     {
         yield return new WaitForSeconds(nextSceneTime);
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

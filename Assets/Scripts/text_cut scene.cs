@@ -17,7 +17,7 @@ public class text_cutscene : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
