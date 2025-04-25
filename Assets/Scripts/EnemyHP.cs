@@ -38,7 +38,7 @@ public class EnemyHP : MonoBehaviour
         Debug.Log($"{healthPercent}% - perc");
 
         UpdateEnemyColor(healthPercent);
-        animator.SetBool("dead", true);
+        //animator.SetBool("dead", true);
         
     }
 
