@@ -8,11 +8,14 @@ public class LampController : MonoBehaviour
     public GameObject GoldText;
     public int ActivatePrice = 5;
     private EnemySpawnerLighthouse spawner;
+    
+    BossDamage bossDamage;
 
     public bool isActiveNow = false;
 
     private void Start()
     {
+        bossDamage = GetComponent<BossDamage>();
         spawner = GetComponent<EnemySpawnerLighthouse>();
         ToggleText(isActiveNow);
     }
@@ -23,6 +26,10 @@ public class LampController : MonoBehaviour
         {
             isActiveNow = true;
             spawner.EnableEnemies();
+            if (bossDamage != null)
+            {
+                bossDamage.HitBoss();
+            }
             ToggleText(isActiveNow);
         }
     }

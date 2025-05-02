@@ -4,17 +4,20 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
     private int currentHP;
-    public int currentHPMax;
-
+    public int maxHP;
+    
     private void Start()
     {
-        currentHP = currentHPMax;
+        currentHP = maxHP;
     }
 
     public void ReceiveDamag(int dmg)
     {
         currentHP -= (int)MathF.Abs(dmg);
+        if(currentHP <= 0)
+        {
+            Destroy(gameObject);
+        }
+        Debug.Log("Boss HP: " + currentHP);
     }
-    
-    
 }
