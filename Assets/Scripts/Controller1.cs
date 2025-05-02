@@ -47,7 +47,10 @@ public class Controller1 : MonoBehaviour
 
     private void Start()
     {
-        GoldText.text = currentGold.ToString();
+        if(GoldText != null)
+        {
+            GoldText.text = currentGold.ToString();
+        }
     }
 
     private void OnEnable()
