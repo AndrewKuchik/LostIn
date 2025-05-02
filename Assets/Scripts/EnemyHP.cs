@@ -7,7 +7,7 @@ public class EnemyHP : MonoBehaviour
     private float health;
     public int maxHealth = 100;
     private SpriteRenderer sr;
-    public Animator animator;
+    // public Animator animator;
 
 
     private void Start()
@@ -19,6 +19,7 @@ public class EnemyHP : MonoBehaviour
     public void ReceiveDamage(float damage)
     {
         health -= damage;
+        Debug.Log("Enemy HP: " + health);    
         if (health <= 0)
         
             Destroy(gameObject);
