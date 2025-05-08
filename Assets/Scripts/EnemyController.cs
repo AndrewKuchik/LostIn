@@ -20,13 +20,17 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            PlayerHP playerHp = collision.transform.GetComponent<PlayerHP>();
-            playerHp.hp -= 25;
+            EnemyHP enemyHp = GetComponent<EnemyHP>();
+            if(enemyHp.health>0){
+                PlayerHP playerHp = collision.transform.GetComponent<PlayerHP>();
+                playerHp.hp -= 25;
 
-            //if (playerHp.hp <= 0)
-            //{
-            //    Destroy(collision.gameObject);
-            //}
+                //if (playerHp.hp <= 0)
+                //{
+                //    Destroy(collision.gameObject);
+                //}
+            }
+            
         }
     }
 }

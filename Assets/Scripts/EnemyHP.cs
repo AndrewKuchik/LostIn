@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class EnemyHP : MonoBehaviour
 {
-    private float health;
+    public float health;
     public int maxHealth = 100;
     private SpriteRenderer sr;
-    // public Animator animator;
+    public Animator animator;
 
 
     private void Start()
@@ -19,16 +19,17 @@ public class EnemyHP : MonoBehaviour
     public void ReceiveDamage(float damage)
     {
         health -= damage;
-        Debug.Log("Enemy HP: " + health);    
+        Debug.Log("Enemy HP: " + health);
         if (health <= 0)
-        
-            Destroy(gameObject);
-            
-        
-            
-            
-        
-        
+        {
+            Destroy(gameObject, 2f);
+
+            animator.SetBool("dead", true);
+        }
+
+
+
+
 
         //Debug.Log("Hit");
         
@@ -39,7 +40,7 @@ public class EnemyHP : MonoBehaviour
         Debug.Log($"{healthPercent}% - perc");
 
         UpdateEnemyColor(healthPercent);
-        //animator.SetBool("dead", true);
+        
         
     }
 
