@@ -7,7 +7,7 @@ public class EnemyLevel5 : MonoBehaviour
     
     void Start()
     {
-        
+        speed = Random.Range(1f, 4f);
     }
 
     // Update is called once per frame

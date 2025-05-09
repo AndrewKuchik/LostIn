@@ -6024,7 +6024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841227e887ae95f40afee04975bc7871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneIndex: 4
 --- !u!1 &1794295868
 GameObject:
   m_ObjectHideFlags: 0
@@ -36532,7 +36531,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -37297,6 +37296,8 @@ MonoBehaviour:
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
+  currentGold: 0
+  GoldText: {fileID: 0}
 --- !u!212 &7494127340416957159
 SpriteRenderer:
   m_ObjectHideFlags: 0
