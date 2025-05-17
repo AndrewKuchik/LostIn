@@ -5,6 +5,8 @@ public class PlayerHP : MonoBehaviour
 {
     public float hp = 100;
     public TextMeshProUGUI LightText;
+    public AudioClip deathSound;
+    
 
    public void healPlayer(float amount)
     {
@@ -27,6 +29,8 @@ public class PlayerHP : MonoBehaviour
             if (fader != null)
             {
                 StartCoroutine(fader.FadeLight(1, 0, transform));
+                transform.GetComponent<Controller1>().enabled = false;
+                transform.GetComponent<AudioSource>().PlayOneShot(deathSound);
                 Rigidbody2D rb = GetComponent<Rigidbody2D>();
                 rb.gravityScale = 0;
                 rb.linearVelocityY = 0;

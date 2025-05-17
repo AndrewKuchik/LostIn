@@ -4,38 +4,50 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class Controller1 : MonoBehaviour
 {
+    [Header("Movement Settings")]
     public float speed = 5f;
     public float maxSpeed = 5f;
     public float jumpHeight = 10f;
     private int availableJumpsCount = 1;
     public int maxAvailableJumpsCount = 2;
-
     public Transform groundChecker;
     public LayerMask groundLayer;
     public float groundRadius = 1f;
     private bool isJumping = false;
-
+    public bool canJump = true;
     private InputSystem_Actions controls;
     Rigidbody2D rb;
     SpriteRenderer _renderer;
 
+    [Header("Interaction Settings")]
     public float interractionRadius = 2f;
     public LayerMask lampLayer;
-
-    public bool canJump = true;
     
     public Animator animator;
     bool jump = false;
     
     public UnityEvent OnLandEvent;
+    
+    
+    [Header("Sound")]
+    public AudioClip jumpSound;
+    public AudioClip humanSound;
+    public AudioClip torchSound;
+    public AudioClip pickupSound;
+    public AudioClip[] footstepSound;
+    private AudioSource audioSource;
 
+
+    [Header("UI Elements")]
     public int currentGold = 0;
     public TextMeshProUGUI GoldText;
-
     private PlayerHP playerHP;
+    
+    
   
     private void Awake()
     {
@@ -52,6 +64,8 @@ public class Controller1 : MonoBehaviour
         {
             GoldText.text = currentGold.ToString();
         }
+        
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -87,6 +101,9 @@ public class Controller1 : MonoBehaviour
                     rb.linearVelocity = new Vector2(0, jumpHeight);
                     availableJumpsCount--;
                     isJumping = true;
+                    Debug.Log(("Doing Jump SOund"));
+                    audioSource.PlayOneShot(jumpSound);
+                    audioSource.PlayOneShot(humanSound);
                 }
             }
         }
@@ -102,7 +119,6 @@ public class Controller1 : MonoBehaviour
         if (movDir.x < 0)
         {
             _renderer.flipX = true;
-            
         }
         else if (movDir.x > 0)
         {
@@ -110,6 +126,12 @@ public class Controller1 : MonoBehaviour
         }
         
         transform.Translate(movDir.x * Time.deltaTime * speed, 0, 0);
+
+        if (movDir != Vector2.zero)
+        {
+            PlayRandomFootstep();
+        }
+        
         animator.SetFloat("speed", Mathf.Abs(movDir.x));
     }
     
@@ -145,6 +167,7 @@ public class Controller1 : MonoBehaviour
                 if (currentGold >= lamp.ActivatePrice)
                 {
                     UpdateGold(-lamp.ActivatePrice);
+                    audioSource.PlayOneShot(torchSound);
                     lamp.ToggleLamp();
                 }
             }
@@ -157,10 +180,30 @@ public class Controller1 : MonoBehaviour
 
     public void UpdateGold(int amount)
     {
+        if (amount > 0)
+        {
+            audioSource.PlayOneShot(pickupSound);
+        }
+       
+        
         currentGold += amount;
         if (GoldText != null)
         {
             GoldText.text = currentGold.ToString();
         }
+    }
+
+
+    private void PlayRandomFootstep()
+    {
+        if (footstepSound.Length == 0) 
+            return;
+        
+        if(audioSource.isPlaying) 
+            return;
+        
+        int random = Random.Range(0, footstepSound.Length);
+        audioSource.pitch = Random.Range(0.75f, 1.25f);
+        audioSource.PlayOneShot(footstepSound[random]);
     }
 }

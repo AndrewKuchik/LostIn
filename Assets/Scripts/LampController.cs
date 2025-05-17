@@ -9,6 +9,8 @@ public class LampController : MonoBehaviour
     public int ActivatePrice = 5;
     private EnemySpawnerLighthouse spawner;
     
+    private AudioSource audioSource;
+    
     BossDamage bossDamage;
 
     public bool isActiveNow = false;
@@ -17,6 +19,7 @@ public class LampController : MonoBehaviour
     {
         bossDamage = GetComponent<BossDamage>();
         spawner = GetComponent<EnemySpawnerLighthouse>();
+        audioSource = GetComponent<AudioSource>();  
         ToggleText(isActiveNow);
     }
 
@@ -30,6 +33,12 @@ public class LampController : MonoBehaviour
             {
                 bossDamage.HitBoss();
             }
+
+            if (!audioSource.isPlaying && isActiveNow)
+            {
+                audioSource.Play();
+            }
+            
             ToggleText(isActiveNow);
         }
     }

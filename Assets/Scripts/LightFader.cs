@@ -36,6 +36,7 @@ public class LightFader : MonoBehaviour
         float elapsedTime = 0f;
         targetLight.intensity = 1f;
 
+        
         while (elapsedTime < fadeDuration)
         {
             if (hasToRotate)
