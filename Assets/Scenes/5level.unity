@@ -3242,7 +3242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1158538528}
-  bulletPrefab: {fileID: 4475463447954847465, guid: dbbe769b6458a3547bf3e7574690a1eb,
+  bulletPrefab: {fileID: 6127846465465544063, guid: 3e36c570266344d43aec2a18bb259dbe,
     type: 3}
 --- !u!1 &1078810974
 GameObject:
@@ -3619,15 +3619,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundRadius: 1
+  canJump: 1
   interractionRadius: 2
   lampLayer:
     serializedVersion: 2
     m_Bits: 65536
-  canJump: 1
   animator: {fileID: 1158538533}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
+  jumpSound: {fileID: 0}
+  humanSound: {fileID: 0}
+  torchSound: {fileID: 0}
+  pickupSound: {fileID: 0}
+  footstepSound: []
   currentGold: 400
   GoldText: {fileID: 0}
 --- !u!114 &1158538531
@@ -3644,6 +3649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10000
   LightText: {fileID: 1967812454}
+  deathSound: {fileID: 0}
 --- !u!50 &1158538532
 Rigidbody2D:
   serializedVersion: 5
