@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: b509ae177e888df449022edfa7f6b79d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - deathSound: {instanceID: 0}
+  - goldCoin: {fileID: 1091216455928862868, guid: af443f8a26c914b47939bd04242f805b,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

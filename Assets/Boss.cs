@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,11 +14,17 @@ public class Boss : MonoBehaviour
     
     public List<Transform> bossWaypoints = new List<Transform>();
     private Transform currentWaypoint;
+    public int bossMaxHits = 3;
+    private int bossCurrentHits = 0;
+    public TextMeshProUGUI bossHitsText;
+    public AudioClip bossDeathSound;
+    private AudioSource audioSource;
     
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         currentHP = maxHP;
-
+        bossHitsText.text = $"{bossCurrentHits} / {bossMaxHits}";
         
         foreach (Transform position in bossPath.transform)
         {   
@@ -29,10 +36,13 @@ public class Boss : MonoBehaviour
 
     public void ReceiveDamag(int dmg)
     {
+        bossCurrentHits++;
+        bossHitsText.text = $"{bossCurrentHits} / {bossMaxHits}";
         currentHP -= (int)MathF.Abs(dmg);
         if(currentHP <= 0)
         {
-            Destroy(gameObject);
+            audioSource.PlayOneShot(bossDeathSound);
+            Destroy(gameObject,2f );
         }
         Debug.Log("Boss HP: " + currentHP);
     }

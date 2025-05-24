@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerHP : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class PlayerHP : MonoBehaviour
 
     void Update()
     {
+        if (LightText == null) return;
+        
         hp -= 1f * Time.deltaTime;
         LightText.text = $"Light {hp.ToString("F1")}%";
 
@@ -34,6 +37,10 @@ public class PlayerHP : MonoBehaviour
                 Rigidbody2D rb = GetComponent<Rigidbody2D>();
                 rb.gravityScale = 0;
                 rb.linearVelocityY = 0;
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }

@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyLevel5 : MonoBehaviour
 {
@@ -14,5 +16,13 @@ public class EnemyLevel5 : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerHP>().hp -= 15;
+        }
     }
 }

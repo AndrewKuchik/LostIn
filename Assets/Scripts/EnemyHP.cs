@@ -12,7 +12,7 @@ public class EnemyHP : MonoBehaviour
     
     public bool randomHP = false;
     public AudioClip deathSound;
-
+    public GameObject goldCoin;
 
     private void Start()
     {
@@ -30,8 +30,13 @@ public class EnemyHP : MonoBehaviour
     IEnumerator KillGhost()
     {
         isDead = true;
-        transform.GetComponent<AudioSource>().PlayOneShot(deathSound);
-        transform.GetComponent<EnemyController>().enabled = false;
+        
+        EnemyController en = transform.GetComponent<EnemyController>();
+        if (en != null)
+        {
+            en.enabled = false;
+        }
+        
         
         if (animator != null)
         {
@@ -42,9 +47,11 @@ public class EnemyHP : MonoBehaviour
         
         sr.enabled = false;
         transform.GetComponent<BoxCollider2D>().enabled = false;
+        transform.GetComponent<AudioSource>().PlayOneShot(deathSound);
         
         yield return new WaitForSeconds(deathSound.length - 0.7f);
         
+        Instantiate(goldCoin, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
     

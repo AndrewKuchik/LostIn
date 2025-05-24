@@ -26,7 +26,9 @@ public class Pivot : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            bullet.GetComponent<BulletFly>().player = target;
+            
             yield return new WaitForSeconds(1f);
         }
     }
