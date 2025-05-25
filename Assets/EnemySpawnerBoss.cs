@@ -22,7 +22,7 @@ public class EnemySpawnerBoss : MonoBehaviour
                 quaternion.identity);
             var e = enemy.GetComponent<EnemyLevel5>();
             e.Player = Player;
-            yield return new WaitForSeconds(Random.Range((spawnTimer - 2f), (spawnTimer + 2f)));
+            yield return new WaitForSeconds(Random.Range((spawnTimer - 1f), (spawnTimer + 1f)));
         }    
     }
 }
