@@ -1,101 +1,73 @@
 ﻿using System.Collections;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyHP : MonoBehaviour
 {
     public float health;
     public int maxHealth = 100;
-    private SpriteRenderer sr;
-    public Animator animator;
-    
     public bool randomHP = false;
+
+    public Animator animator;
     public AudioClip deathSound;
     public GameObject goldCoin;
+
+    private SpriteRenderer sr;
+    private bool isDead = false;
 
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        health = maxHealth;
-
-        if (randomHP)
-        {
-            health = Random.Range(3, 7);
-        }
+        health = randomHP ? Random.Range(3, 7) : maxHealth;
     }
 
-    
-    bool isDead = false;
+    public void ReceiveDamage(float damage)
+    {
+        if (isDead) return;
+
+        health -= damage;
+        Debug.Log($"Enemy HP: {health}");
+
+        if (health <= 0)
+        {
+            StartCoroutine(KillGhost());
+        }
+
+        health = Mathf.Clamp(health, 0, maxHealth);
+        UpdateEnemyColor(health / maxHealth);
+    }
+
     IEnumerator KillGhost()
     {
         isDead = true;
-        
-        EnemyController en = transform.GetComponent<EnemyController>();
-        if (en != null)
-        {
-            en.enabled = false;
-        }
-        
-        
-        if (animator != null)
-        {
-            animator.SetBool("dead", true);
-        }
-        
-        yield return new WaitForSeconds(0.7f);
-        
+
+        // 1) Отключаем контроллер, чтобы враг замер.
+        EnemyController en = GetComponent<EnemyController>();
+        if (en) en.enabled = false;
+
+        // 2) Запускаем анимацию смерти.
+        if (animator) animator.SetBool("dead", true);
+
+        // 3) Сразу спавним монетку!
+        if (goldCoin) Instantiate(goldCoin, transform.position, Quaternion.identity);
+
+        // 4) Проигрываем звук смерти (если есть AudioSource).
+        AudioSource audio = GetComponent<AudioSource>();
+        if (audio && deathSound) audio.PlayOneShot(deathSound);
+
+        // 5) Дожидаемся конца анимации и звука.
+        yield return new WaitForSeconds(0.7f); // анимация
         sr.enabled = false;
-        transform.GetComponent<BoxCollider2D>().enabled = false;
-        transform.GetComponent<AudioSource>().PlayOneShot(deathSound);
-        
-        yield return new WaitForSeconds(deathSound.length - 0.7f);
-        
-        Instantiate(goldCoin, transform.position, Quaternion.identity);
+        GetComponent<Collider2D>().enabled = false;
+
+        // ждём остаток звука (если был)
+        if (audio && deathSound)
+            yield return new WaitForSeconds(deathSound.length - 0.7f);
+
         Destroy(gameObject);
     }
-    
-    
-    public void ReceiveDamage(float damage)
+
+    void UpdateEnemyColor(float hpPercent)
     {
-        health -= damage;
-        Debug.Log("Enemy HP: " + health);
-        if (health <= 0)
-        {
-            if(!isDead)
-                StartCoroutine(KillGhost());
-        }
-
-
-        //Debug.Log("Hit");
-        
-        health = Mathf.Clamp(health, 0, maxHealth);
-
-        float healthPercent = (health / maxHealth);
-        //Debug.Log(health);
-        Debug.Log($"{healthPercent}% - perc");
-
-        UpdateEnemyColor(healthPercent);
-        
-        
+        sr.color = Color.Lerp(Color.red, Color.white, hpPercent);
     }
-
-    private void UpdateEnemyColor(float currentHp)
-    {
-        // sr.color = Color.Lerp(sr.color, Color.red, currentHp);
-        // sr.color = Color.Lerp(Color.white, Color.red, currentHp);
-        sr.color = Color.Lerp(Color.red, Color.white, currentHp);
-       
-    }
-
-    private void UpdateHealthBar()
-    {
-        // if (hpBar != null)
-        // {
-        //     int roundedHealth = Mathf.RoundToInt((health / maxHealth) * 100);
-        //     hpBar.text = $"HP: {roundedHealth}%";
-        // }
-    }
-
-
 }

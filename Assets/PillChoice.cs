@@ -1,33 +1,55 @@
 using UnityEngine;
+using TMPro; // Важно для TMP
 using UnityEngine.SceneManagement;
 
 public class PillChoice : MonoBehaviour
 {
     [Header("Что показать")]
     public GameObject imageToShow;
-    public GameObject Background;
+    public GameObject background;
+    public TextMeshProUGUI text;
 
-    [Header("Какую сцену загрузить после")]
+    [Header("UI Elements")]
+    public TMP_Text hoverText; // TMP вместо обычного Text
+    [TextArea]
+    public string pillDescription;
+
+    [Header("Что загрузить")]
     public string sceneToLoad = "menu";
-
-    [Header("Сколько ждать перед загрузкой")]
     public float delayBeforeLoad = 5f;
+
+    void OnMouseEnter()
+    {
+        if (hoverText != null)
+        {
+            hoverText.text = pillDescription;
+            hoverText.enabled = true;
+        }
+    }
+
+    void OnMouseExit()
+    {
+        if (hoverText != null)
+        {
+            hoverText.text = "";
+            hoverText.enabled = false;
+        }
+    }
 
     void OnMouseDown()
     {
-        Debug.Log("Нажали на: " + gameObject.name);
-
-        // Показать нужную картинку
         if (imageToShow != null)
-        {
             imageToShow.SetActive(true);
-        }
-        else
-        {
-            Background.SetActive(false);
-        }
 
-        // Запустить таймер на загрузку сцены
+        if (background != null)
+            background.SetActive(false);
+        
+        if (text != null)
+            text.enabled = false;
+
+        if (hoverText != null)
+            hoverText.enabled = false;
+
         Invoke("LoadNextScene", delayBeforeLoad);
     }
 
